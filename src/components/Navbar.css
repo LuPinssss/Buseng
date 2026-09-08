@@ -1,0 +1,36 @@
+:root {
+  --color-dark: #27374D;
+  --color-medium: #526D82;
+  --color-light: #9DB2BF;
+  --color-pale: #DDE6ED;
+}
+
+@font-face {
+  font-family: 'Dessertfolk';
+  src: url('../assets/fonts/Dessertfolk.ttf') format('truetype');
+}
+*{
+    box-sizing: border-box;
+    margin: 0;     
+}
+
+body{
+    font-family: 'Dessertfolk','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+}
+.navbar-container{
+    background-color: var(--color-dark);
+    padding: 20px 20px;
+}
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar-links{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-pale);
+}
