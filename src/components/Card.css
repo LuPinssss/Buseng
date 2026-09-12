@@ -1,0 +1,38 @@
+:root {
+  --color-dark: #27374D;
+  --color-medium: #526D82;
+  --color-light: #9DB2BF;
+  --color-pale: #DDE6ED;
+}
+
+@font-face {
+  font-family: 'Dessertfolk';
+  src: url('../assets/fonts/Dessertfolk.ttf') format('truetype');
+}
+
+.cards {
+  background-color: var(--color-light);
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid var(--color-dark);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  padding: 5px;
+  width: 50px;
+  height: 30px;
+  background-color: var(--color-pale);
+  border: 2px solid var(--color-dark);
+  border-radius: 6px;
+  box-shadow: 5px 5px 10px rgba(82, 109, 130, 0.8);
+}
+.card-button:hover{
+    color: var(--color-pale);
+    background-color: var(--color-dark);
+}

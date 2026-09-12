@@ -1,0 +1,25 @@
+:root {
+  --color-dark: #27374D;
+  --color-medium: #526D82;
+  --color-light: #9DB2BF;
+  --color-pale: #DDE6ED;
+}
+
+@font-face {
+  font-family: 'Dessertfolk';
+  src: url('../assets/fonts/Dessertfolk.ttf') format('truetype');
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 900px;
+    margin: 0 auto;
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
