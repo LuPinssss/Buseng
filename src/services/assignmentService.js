@@ -1,5 +1,5 @@
 import { db } from './firebase';
-import { collection, addDoc, getDocs, doc, updateDoc } from 'firebase/firestore';
+import { collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from 'firebase/firestore';
 
 export async function addAssignment(assignmentData) {
   try {
