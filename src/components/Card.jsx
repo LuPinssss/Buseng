@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Card.css';
 
 function Card({ subject }) {
@@ -7,7 +8,9 @@ function Card({ subject }) {
         <h2 className="card-title">{subject.name}</h2>
         <p className="card-pending">{subject.pending} pending assignments</p>
       </div>
-      <button className="card-button">View</button>
+      <Link to={`/assignments#subject-${subject.id}`} className="card-button">
+        View
+      </Link>
     </div>
   );
 }
