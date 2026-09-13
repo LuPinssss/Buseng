@@ -1,0 +1,30 @@
+.subject-section {
+  min-height: 100vh;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+.subject-section:nth-child(odd) {
+  background-color: var(--color-pale);
+}
+
+.subject-section:nth-child(even) {
+  background-color: var(--color-light);
+}
+
+.subject-heading {
+  color: var(--color-dark);
+  margin-bottom: 24px;
+}
+
+.assignment-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.no-assignments {
+  color: var(--color-medium);
+  font-style: italic;
+}
