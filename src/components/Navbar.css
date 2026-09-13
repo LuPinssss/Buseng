@@ -34,3 +34,10 @@ body{
     font-weight: bold;
     color: var(--color-pale);
 }
+@media (max-width: 600px) {
+  .navbar-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
