@@ -1,22 +1,33 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { subjects } from '../data/subjects';
-import { getAssignments, getResources } from '../services/assignmentService';
+import { getAssignments, getResources, deleteAssignment, deleteResource } from '../services/assignmentService';
 import './Assignments.css';
 
 function Assignments() {
   const [assignments, setAssignments] = useState([]);
   const [resources, setResources] = useState([]);
 
+  async function fetchData() {
+    const assignmentData = await getAssignments();
+    const resourceData = await getResources();
+    setAssignments(assignmentData);
+    setResources(resourceData);
+  }
+
   useEffect(() => {
-    async function fetchData() {
-      const assignmentData = await getAssignments();
-      const resourceData = await getResources();
-      setAssignments(assignmentData);
-      setResources(resourceData);
-    }
     fetchData();
   }, []);
+
+  async function handleDeleteAssignment(id) {
+    await deleteAssignment(id);
+    fetchData();
+  }
+
+  async function handleDeleteResource(id) {
+    await deleteResource(id);
+    fetchData();
+  }
 
   return (
     <div>
@@ -39,6 +50,9 @@ function Assignments() {
                     <h3>{a.title}</h3>
                     <p>Due: {a.dueDate}</p>
                     <p>{a.description}</p>
+                    <button className="delete-button" onClick={() => handleDeleteAssignment(a.id)}>
+                      Delete
+                    </button>
                   </div>
                 ))
               )}
@@ -52,6 +66,9 @@ function Assignments() {
                     <a href={r.link} target="_blank" rel="noreferrer">
                       {r.label || 'Resource'}
                     </a>
+                    <button className="delete-button" onClick={() => handleDeleteResource(r.id)}>
+                      Delete
+                    </button>
                   </div>
                 ))
               )}

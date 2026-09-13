@@ -49,3 +49,20 @@ export async function getResources() {
     return [];
   }
 }
+export async function deleteAssignment(id) {
+  try {
+    await deleteDoc(doc(db, 'assignments', id));
+  } catch (error) {
+    console.error('Error deleting assignment:', error);
+    throw error;
+  }
+}
+
+export async function deleteResource(id) {
+  try {
+    await deleteDoc(doc(db, 'resources', id));
+  } catch (error) {
+    console.error('Error deleting resource:', error);
+    throw error;
+  }
+}
