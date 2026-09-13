@@ -31,6 +31,7 @@
   border: 2px solid var(--color-dark);
   border-radius: 6px;
   box-shadow: 5px 5px 10px rgba(82, 109, 130, 0.8);
+  text-decoration: none;
 }
 .card-button:hover{
     color: var(--color-pale);
